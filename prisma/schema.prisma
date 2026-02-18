@@ -33,3 +33,19 @@ model Post {
   author    User?    @relation(fields: [authorId], references: [id])
   authorId  Int?
 }
+
+model Proveedor {
+  id          Int      @default(autoincrement()) @id
+  ruc      String @unique
+  nombre      String?
+  telefono    String?
+  email       String?
+  direccion   String?
+  departamento String?
+  provincia   String?
+  distrito    String?
+  banco       String?
+  cta_corriente      String?
+  cta_detraccion   String?
+  estado      String? 
+}
